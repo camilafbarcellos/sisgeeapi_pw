@@ -42,7 +42,7 @@ const addSalas = (request, response) => {
 // retorna um array que irá conter os valores dos parâmetros
 const updateSalas = (request, response) => {
     const { numero, descricao, capacidade, predio, codigo } = request.body;
-    pool.query(`UPDATE sala SET numero=$1, descricao=$2, capacidade=$3, predio=$4  
+    pool.query(`UPDATE salas SET numero=$1, descricao=$2, capacidade=$3, predio=$4  
     WHERE codigo=$5 RETURNING codigo, numero, descricao, capacidade, predio`,
         [numero, descricao, capacidade, predio, codigo],
         (error, results) => {
