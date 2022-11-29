@@ -14,13 +14,13 @@ rotas.route('/predios/:codigo')
     .delete(controlePredios.deletePredio)
     .get(controlePredios.getPredioPorCodigo)
 
-    rotas.route('/salas')
+rotas.route('/salas')
     .get(controleSalas.getSalas)
-    .post(controleSalas.addSalas)
-    .put(controleSalas.updateSalas)
+    .post(controleSalas.addSala)
+    .put(controleSalas.updateSala)
 
 rotas.route('/salas/:codigo')
-    .delete(controleSalas.deleteSala)
     .get(controleSalas.getSalaPorCodigo)
+    .delete(controleSalas.deleteSala)
 
 module.exports = rotas;
